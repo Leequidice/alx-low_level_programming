@@ -1,0 +1,1 @@
+This readme shoukd cobttaaib detaiks of what each scriot in this repoo does echo This readme should contain details of what each script in this repo does, , buutt it doesntt echo This readme should contain details of what each script in this repo does, but it doesnt 
