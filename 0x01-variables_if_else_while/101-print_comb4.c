@@ -1,6 +1,12 @@
 #include <stdio.h>
 
-int main() {
+/**
+ *  * main - entry point
+ *   *
+ *    * Return: always returns 0
+ *     */
+int main(void)
+{
 	    for (int i = 0; i < 8; i++) {
 		            for (int j = i+1; j < 9; j++) {
 				                for (int k = j+1; k < 10; k++) {
@@ -14,10 +20,10 @@ int main() {
 																									                    putchar(j + '0');
 																											                        putchar(k + '0');
 																														                }
-											                putchar(',');
-													                putchar(' ');
-															            }
-						        }
-			        }
+											putchar(',');
+	putchar(' ');
+}
+}
+}
 return 0;
 }
