@@ -25,4 +25,4 @@ while (a_to_f <= 'f') /*print a-f to finish hexbase*/
 	putchar('\n');
 
 return (0);
-} 
+}
