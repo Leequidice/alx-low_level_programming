@@ -9,7 +9,7 @@
 int main(void)
 {
 	int ones;
-	int tens;
+int tens;
 
 for (tens = '0'; tens <= '9'; tens++) /*increment tens*/
 {
