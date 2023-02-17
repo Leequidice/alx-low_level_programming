@@ -2,7 +2,6 @@
 
 /**
  *  *main - print 00 to 99 with no duplicate digits or combos: no 11, no 10 (01)
- *   *
  *    *Return: Always 0 (Success)
  */
 
