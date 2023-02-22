@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * nine times table - times table function
+ * times_table - times table function
  *
  */
 void times_table(void)
@@ -18,13 +18,15 @@ void times_table(void)
 	if (j == 0)
 	{
 	_putchar('0');
-	} else if (prod <= 9)
+	} 
+	else if (prod <= 9)
 	{
 	_putchar(',');
 	_putchar(' ');
 	_putchar(' ');
 	_putchar(prod + '0');
-	} else
+	} 
+	else
 {
 	_putchar(',');
 	_putchar(' ');
