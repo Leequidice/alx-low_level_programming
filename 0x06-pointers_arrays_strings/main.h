@@ -1,6 +1,12 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 /**
+ * infinite_add- adds two numbers
+ * @n1: first numver to add
+ * @n2: second number to add
+ */
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
+/**
  * print_number- prints a number
  * @n: number to print to character
  */
