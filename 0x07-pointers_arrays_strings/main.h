@@ -1,65 +1,90 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef MAIN_H
+#define MAIN_H
+
 /**
- * set_string - sets string to something
- * @s: string to set to
- * @to: set to
+ * _putchar - puts character to standard output
+ * @c: character to put to standard output
  */
-void set_string(char **s, char *to);
+
+int _putchar(char c);
+
 /**
- * print_diagsums - prints diagonal sums
- * @a: array to do
- * @size: size of arrays
+ * _memset - fill n bytes of memory with a constant value
+ * @s: pointer to memory area
+ * @b: constant value
+ * @n: number of bytes to fill
+ * Return: memory area
  */
-void print_diagsums(int *a, int size);
+
+char *_memset(char *s, char b, unsigned int n);
+
 /**
- * print_chessboard - prints board
- * @a: prints a characters
- *
+ * _memcpy - copy n bytes of memory from source to destination
+ * @dest: destination
+ * @src: source
+ * @n: number of bytes
+ * Return: pointer to dest
  */
-void print_chessboard(char (*a)[8]);
-/**
- * _strstr - locates substring
- * @haystack: string to locate substring
- * @needle: string to locate
- * Return: return string found
- */
-char *_strstr(char *haystack, char *needle);
-/**
- * _strpbrk - search string for all chars
- * @s: string to search
- * @accept: accepting string
- * Return: return those letters only
- */
-char *_strpbrk(char *s, char *accept);
-/**
- * _strspan  - length of previx substring
- * @s: string to go through
- * @accept: accept bytes
- * Return: returns usigned int value
- */
-unsigned int _strspn(char *s, char *accept);
-/**
- * _strchr - locates character in string
- * @s: string to find character
- * @c: character to find
- * Return: found character
- */
-char *_strchr(char *s, char c);
-/**
- * _memcpy - copies value from src to dest
- * @dest: destination to copy
- * @src: source to copy from
- * @n: amount of times from 0 to copy
- * Return: return string char value
- */
+
 char *_memcpy(char *dest, char *src, unsigned int n);
+
 /**
- * _memset - set memory to a character
- * @s: value and pointer
- * @b: value to replace at pointers
- * @n: n amount of times to replace
- * Return: returns a pointer to s
+ * _strchr - locate 1st occurrence of character in string and returns pointer there
+ * @s: string to search
+ * @c: target characer
+ * Return: pointer to that character in string
  */
-char *_memset(char *s, char b, unsigned int n)
+
+char *_strchr(char *s, char c);
+
+/**
+ * _strspn - return length of string that matches values consistently
+ * @s: string to search
+ * @accept: target matches
+ * Return: number of bytes consecutively matched
+ */
+
+unsigned int _strspn(char *s, char *accept);
+
+/**
+ * _strpbrk - return pointer to byte in s that matches a byte in accepted target
+ * @s: string to search
+ * @accept: target matches
+ * Return: pointer to index of string at first occurence
+ */
+
+char *_strpbrk(char *s, char *accept);
+
+/**
+ * _strstr - locate and return pointer to first occurence of substring
+ * @haystack: string to search
+ * @needle: target substring to search for
+ * Return: pointer to index of string at first occurence of whole substring
+ */
+
+char *_strstr(char *haystack, char *needle);
+
+/**
+ * print_chessboard - print chessboard given set 2D array
+ * @a: 2D array
+ */
+
+void print_chessboard(char (*a)[8]);
+
+/**
+ * print_diagsums - print sums of diagonals in matrix
+ * @a: matrix
+ * @size: size of matrix
+ */
+
+void print_diagsums(int *a, int size);
+
+/**
+ * set_string - set value of pointer to a char
+ * @s: variable of type pointer
+ * @to: char
+ */
+
+void set_string(char **s, char *to);
+
 #endif
