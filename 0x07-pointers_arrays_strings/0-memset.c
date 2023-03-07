@@ -21,7 +21,8 @@ char *_memset(char *s, char b, unsigned int n)
 			s[i] = b;
 	}
 
+	_putchar('\n');
+
 	return (s);
 
-	_putchar('\n');
 }
