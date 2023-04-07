@@ -1,47 +1,29 @@
 #include "lists.h"
-#include <stdlib.h>
 
 /**
- * reverse_recur - recursively reverses a listint list
- *
- * @first: node to reverse
- * @second: node after node to reverse
- *
- * Return: void
+ * reverse_listint - reverse linked list
+ * @head: pointer to head pointer of linked list
+ * Return: pointer to first node of reversed list
  */
-listint_t *reverse_recur(listint_t *first, listint_t *second)
-{
-	listint_t *ptr, *prev = NULL;
 
-	ptr = first;
-	while (ptr->next != second)
-	{
-		prev = ptr;
-		ptr = ptr->next;
-	}
-
-	if (prev != NULL)
-		prev->next = first;
-	second = first->next;
-	first->next = ptr->next;
-	if (first != ptr && second != first)
-		second = reverse_recur(second, first);
-	ptr->next = second;
-	return (ptr);
-}
-
-/**
- * reverse_listint - reverses a listint list
- *
- * @head: list to reverse
- *
- * Return: new head of list
- */
 listint_t *reverse_listint(listint_t **head)
 {
+	listint_t *prev, *next;
+
+	/* account for no ptr and empty list */
 	if (head == NULL || *head == NULL)
 		return (NULL);
 
-	*head = reverse_recur(*head, NULL);
+	/* iterate thorugh list to reverse linking */
+	prev = NULL;
+	while (*head != NULL)
+	{
+		next = (*head)->next; /* keep track of next node to move to */
+		(*head)->next = prev; /* link current node's ptr to prev node */
+		prev = *head; /* update previous node to be current node */
+		*head = next; /* move current node to next node */
+	}
+	(*head) = prev; /* unlink last element from null and point backwards */
+
 	return (*head);
 }
